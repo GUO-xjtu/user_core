@@ -1,0 +1,5 @@
+Info 2022-11-27 02:08:17,448 v1(7) tracer_option.go:523 192.168.1.10 xiangqing.user.core - default - 0 [bytedtrace] The reporter is agent reporter as default.
+Info 2022-11-27 02:08:18,219 v1(7) debug.go:113 192.168.1.10 xiangqing.user.core - default - 0 starting debug server
+Info 2022-11-27 02:08:18,219 v1(7) server.go:63 192.168.1.10 xiangqing.user.core - default - 0 debug server listen at: [::]:18888
+Info 2022-11-27 02:08:18,210 v1(7) server.go:81 192.168.1.10 xiangqing.user.core - default - 0 KITEX: server listen at addr=[::]:8888
+Info 2022-11-27 02:08:24,182 v1(7) debug.go:126 192.168.1.10 xiangqing.user.core - default - 0 shutting down debug server
