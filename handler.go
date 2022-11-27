@@ -11,5 +11,6 @@ type UserImpl struct{}
 // UserRegister implements the UserImpl interface.
 func (s *UserImpl) UserRegister(ctx context.Context, req *user.RegisterRequest) (resp *user.RegisterResponse, err error) {
 	// TODO: Your code here...
-	return
+	resp = user.NewRegisterResponse()
+	return resp, nil
 }
