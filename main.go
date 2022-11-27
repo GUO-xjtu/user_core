@@ -1,7 +1,7 @@
 package main
 
 import (
-"github.com/xiangqin/user_core/kitex_gen/user/user"
+	"github.com/xiangqin/user_core/kitex_gen/user/user"
 	"log"
 )
 
