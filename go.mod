@@ -2,12 +2,10 @@ module github.com/xiangqin/user_core
 
 go 1.17
 
-replace github.com/apache/thrift => github.com/apache/thrift v0.13.0
+// replace github.com/apache/thrift => github.com/apache/thrift v0.13.0
 
-require (
-	github.com/apache/thrift v0.13.0
-	github.com/cloudwego/kitex v0.4.3
-)
+require github.com/cloudwego/kitex v0.4.3
+require github.com/apache/thrift v0.13.0
 
 require (
 	github.com/bytedance/gopkg v0.0.0-20220817015305-b879a72dc90f // indirect
