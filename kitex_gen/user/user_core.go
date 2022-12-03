@@ -13,7 +13,7 @@ import (
 type RegisterRequest struct {
 	Name     string     `thrift:"Name,1,required" json:"Name"`
 	Gender   int64      `thrift:"Gender,2,required" json:"Gender"`
-	PhoneNum string     `thrift:"PhoneNum,3,required" json:"PhoneNum"`
+	PhoneNum int64      `thrift:"PhoneNum,3,required" json:"PhoneNum"`
 	Base     *base.Base `thrift:"Base,255,required" json:"Base"`
 }
 
@@ -29,7 +29,7 @@ func (p *RegisterRequest) GetGender() (v int64) {
 	return p.Gender
 }
 
-func (p *RegisterRequest) GetPhoneNum() (v string) {
+func (p *RegisterRequest) GetPhoneNum() (v int64) {
 	return p.PhoneNum
 }
 
@@ -47,7 +47,7 @@ func (p *RegisterRequest) SetName(val string) {
 func (p *RegisterRequest) SetGender(val int64) {
 	p.Gender = val
 }
-func (p *RegisterRequest) SetPhoneNum(val string) {
+func (p *RegisterRequest) SetPhoneNum(val int64) {
 	p.PhoneNum = val
 }
 func (p *RegisterRequest) SetBase(val *base.Base) {
@@ -111,7 +111,7 @@ func (p *RegisterRequest) Read(iprot thrift.TProtocol) (err error) {
 				}
 			}
 		case 3:
-			if fieldTypeId == thrift.STRING {
+			if fieldTypeId == thrift.I64 {
 				if err = p.ReadField3(iprot); err != nil {
 					goto ReadFieldError
 				}
@@ -202,7 +202,7 @@ func (p *RegisterRequest) ReadField2(iprot thrift.TProtocol) error {
 }
 
 func (p *RegisterRequest) ReadField3(iprot thrift.TProtocol) error {
-	if v, err := iprot.ReadString(); err != nil {
+	if v, err := iprot.ReadI64(); err != nil {
 		return err
 	} else {
 		p.PhoneNum = v
@@ -294,10 +294,10 @@ WriteFieldEndError:
 }
 
 func (p *RegisterRequest) writeField3(oprot thrift.TProtocol) (err error) {
-	if err = oprot.WriteFieldBegin("PhoneNum", thrift.STRING, 3); err != nil {
+	if err = oprot.WriteFieldBegin("PhoneNum", thrift.I64, 3); err != nil {
 		goto WriteFieldBeginError
 	}
-	if err := oprot.WriteString(p.PhoneNum); err != nil {
+	if err := oprot.WriteI64(p.PhoneNum); err != nil {
 		return err
 	}
 	if err = oprot.WriteFieldEnd(); err != nil {
@@ -369,9 +369,9 @@ func (p *RegisterRequest) Field2DeepEqual(src int64) bool {
 	}
 	return true
 }
-func (p *RegisterRequest) Field3DeepEqual(src string) bool {
+func (p *RegisterRequest) Field3DeepEqual(src int64) bool {
 
-	if strings.Compare(p.PhoneNum, src) != 0 {
+	if p.PhoneNum != src {
 		return false
 	}
 	return true
