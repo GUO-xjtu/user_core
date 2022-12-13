@@ -10,7 +10,7 @@ type Setting struct {
 func NewSetting() (*Setting, error) {
 	vp := viper.New()
 	vp.SetConfigName("config")
-	vp.AddConfigPath("user_core/conf/")
+	vp.AddConfigPath("./conf/")
 	// 可以通过不断调用下面的函数，设置多个配置路径用于查找配置文件
 	//vp.AddConfigPath("etc/")
 	vp.SetConfigType("yaml")

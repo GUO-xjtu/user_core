@@ -28,14 +28,14 @@ App:
 Database:
   DBType: mysql
   Username: root  # 填写你的数据库账号
-  Password:   # 填写你的数据库密码
-  Host: 127.0.0.1:3306
+  Password: GUO0321ye  # 填写你的数据库密码
+  Host: 10.21.107.4:3306
   DBName: xiangqin
   TablePrefix: xiangqin_
   Charset: utf8mb4
   ParseTime: True
-  MaxIdleConns: 10
-  MaxOpenConns: 30
+  MaxIdleConns: 100
+  MaxOpenConns: 300
 # JWT 身份认证
 JWT:
   # 密钥

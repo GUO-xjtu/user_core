@@ -2,6 +2,9 @@ package main
 
 import (
 	"flag"
+	"log"
+	"time"
+
 	"github.com/GUO-xjtu/kitex_gen/user/user"
 	"github.com/xiangqin/user_core/common/logger"
 	"github.com/xiangqin/user_core/common/setting"
@@ -11,8 +14,6 @@ import (
 	"github.com/xiangqin/user_core/global"
 	"github.com/xiangqin/user_core/internal/model"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"log"
-	"time"
 )
 
 func init() {
@@ -102,7 +103,7 @@ func setupLogger() error {
 func setupTracer() error {
 	jaegerTracer, _, err := tracer.NewJaegerTracer(
 		version.AppName,
-		"127.0.0.1:6831",
+		"192.168.0.255:6831",
 	)
 	if err != nil {
 		return err
