@@ -14,7 +14,7 @@ App:
   #：上传文件的最终保存目录
   UploadSavePath: storage/uploads
   # 上传文件后的用于展示的文件服务地址
-  UploadServerUrl: http://127.0.0.1:8000/static
+  UploadServerUrl: http://10.21.21.14:8000/static
   # 上传文件所允许的最大空间大小（MB）
   UploadImageMaxSize: 5  # MB
   # 上传文件所允许的文件后缀
@@ -29,7 +29,7 @@ Database:
   DBType: mysql
   Username: root  # 填写你的数据库账号
   Password:   # 填写你的数据库密码
-  Host: 192.168.0.255:3306
+  Host: 10.21.107.4:3306
   DBName: xiangqin
   TablePrefix: xiangqin_
   Charset: utf8mb4
