@@ -103,7 +103,7 @@ func setupLogger() error {
 func setupTracer() error {
 	jaegerTracer, _, err := tracer.NewJaegerTracer(
 		version.AppName,
-		"192.168.0.255:6831",
+		"10.21.107.4:6831",
 	)
 	if err != nil {
 		return err
