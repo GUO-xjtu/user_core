@@ -1,6 +1,6 @@
 Address: ":80"
 EnableDebugServer: true
-DebugServerPort: "18888"
+DebugServerPort: "80"
 Log:
   Dir: log
   Loggers:
