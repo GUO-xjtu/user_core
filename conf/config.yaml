@@ -28,7 +28,7 @@ App:
 Database:
   DBType: mysql
   Username: root  # 填写你的数据库账号
-  Password:   # 填写你的数据库密码
+  Password: GUO0321ye  # 填写你的数据库密码
   Host: 10.21.107.4:3306
   DBName: xiangqin
   TablePrefix: xiangqin_
